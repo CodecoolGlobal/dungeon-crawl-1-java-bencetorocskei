@@ -43,10 +43,10 @@ public class Main extends Application {
         ui.setPadding(new Insets(10));
 
         ui.add(new Label("Player Health: "), 0, 0);
-        ui.add(new Label("Capitalist Health: "), 0, 1);
+        //ui.add(new Label("Capitalist Health: "), 0, 1);
 
         ui.add(healthLabel, 1, 0);
-        ui.add(monsterHealthLabel, 1, 1);
+        //ui.add(monsterHealthLabel, 1, 1);
         ui.add(pickUpButton, 0, 3);
         ui.add(inventoryLabel, 0, 4);
 
@@ -135,7 +135,7 @@ public class Main extends Application {
                 }
             }
         }
-        if (map.getSkeleton() != null) monsterHealthLabel.setText("" + map.getSkeleton().getHealth());
+        //if (map.getSkeleton() != null) monsterHealthLabel.setText("" + map.getSkeleton().getHealth());
         healthLabel.setText("" + map.getPlayer().getHealth());
         String inventoryText = inventory();
         inventoryLabel.setText("" + inventoryText);
