@@ -36,6 +36,9 @@ public class MapLoader {
                         case 'o':
                             cell.setType(CellType.OPENDOOR);
                             break;
+                        case 'm':
+                            cell.setType(CellType.MUD);
+                            break;
                         case 'ö':
                             cell.setType(CellType.CLOSEDDOOR);
                             break;

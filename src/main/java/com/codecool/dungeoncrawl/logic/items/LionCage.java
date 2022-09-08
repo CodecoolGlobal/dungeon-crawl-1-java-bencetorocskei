@@ -18,5 +18,7 @@ public class LionCage extends Item{
     public void act(GameMap map) {
         map.getPlayer().getItems().add(this);
         map.getPlayer().getItems().removeIf(item -> item.getTileName().equals("lion"));
+        Cell lionCell = map.getPlayer().getCell().getNeighbor(0,-1);
+        lionCell.setItem(new LionItem(lionCell));
     }
 }

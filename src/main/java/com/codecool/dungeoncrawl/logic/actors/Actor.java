@@ -35,7 +35,7 @@ public abstract class Actor implements Drawable {
                 nextCell.getActor() != null && nextCell.getActor().getTileName().equals("auto") ||
                 nextCell.getActor() != null && nextCell.getActor().getTileName().equals("lion"))
             confrontation(nextCell);
-        else if (nextCell.getTileName().equals("wall") || (nextCell.getActor() != null && nextCell.getActor().getTileName().equals("lion")) ||
+        else if (nextCell.getTileName().equals("wall") || nextCell.getTileName().equals("mud") || (nextCell.getActor() != null && nextCell.getActor().getTileName().equals("lion")) ||
                 (nextCell.getTileName().equals("closedDoor") && (!checkPlayerItem("Successfully saved Chameleon!") ||
                         !checkPlayerItem("Successfully saved Panda!") || !checkPlayerItem("Successfully saved Lion!"))) ||
                 (nextCell.getItem() != null && nextCell.getItem().getTileName().equals("lion") && !checkPlayerItem("tranqgun")) ||

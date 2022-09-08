@@ -18,5 +18,7 @@ public class ChameleonCage extends Item{
     public void act(GameMap map) {
         map.getPlayer().getItems().add(this);
         map.getPlayer().getItems().removeIf(item -> item.getTileName().equals("chameleon"));
+        Cell chameleonCell = map.getPlayer().getCell().getNeighbor(0,-1);
+        chameleonCell.setItem(new Chameleon(chameleonCell));
     }
 }
